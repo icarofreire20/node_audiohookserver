@@ -10,10 +10,12 @@ const wavefile = require ('wavefile');
 const readline = require('readline');
 
 
-// Set Audiostream websocket subdomain
-// Set Picovoice access key 
-const mylocaltunnelsubdomain = 'abetztesting';
-const picovoiceaccessKey =  '9r382ygT3p6WjPA9XUAtwE0xA61PKYi8f0wxeZTEL8SO30kIcNEBmQ==';
+// Set Audiostream websocket subdomain, In Genesys Cloud admin set Connection URI to wss://<your local tunnel subdomain>.loca.lt
+
+const mylocaltunnelsubdomain = '<your unique value for the local tunnel subdomain>';
+
+// If transcription is needed set your Picovoice access key 
+const picovoiceaccessKey =  '<your picovoice acces key>';
 
 //global variables
 const server = express();
@@ -198,8 +200,8 @@ function ResumePausedStream(){
 
 function main()
 {
-  console.log("§§§§§§ press q to exit program, press p to pause running audiostream, press c to resume paused stream");
-  Logger("INFO","Audiohook Server started.");
+    console.log("§§§§§§ press q to exit program, press p to pause running audiostream, press c to resume paused stream");
+    Logger("INFO","Audiohook Server started.");
     process.stdin.setRawMode(true);
     readline.emitKeypressEvents(process.stdin);
 
