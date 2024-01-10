@@ -1,24 +1,11 @@
 # Audiohookserver
 
-Basic audiohook server implementation for single call handling to demo functionality
+Basic server implementation for Genesys Cloud CX Audiohook interation for learning and self studying purpose. Provided as is.
 
-### Installation
+It only supports one call at a time and only mono streams (internal or external).
 
-- Install Node js
-- Download project
-- npm install
+Received audio is saved in a local .wav file to confirm streaming works.
+Optionally wav file can be transcribed.
+While application is running pressing p pauses the streaming, c resumes the streaming and q exists the application.
 
-
-### Usage
-
-- Open index.js file in editor
-- Replace values of these parameters with your own values
-    const mylocaltunnelsubdomain = 'abetztesting';
-    const picovoiceaccessKey =  '9r382ygT3p6WjPA9XUAtwE0xA61PKYi8f0wxeZTEL8SO30kIcNEBmQ==';
-- Safe changes
-
-- Follow https://help.mypurecloud.com/articles/about-audiohook-monitor/ to install and configure your Audiohook client integration
-- Set Audiohook Connection URL to wss://<value of mylocaltunnelsubdomain>.loca.lt
-- open cmd prompt in project directory
-- enter: node index.js
 
