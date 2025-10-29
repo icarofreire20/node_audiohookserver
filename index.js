@@ -205,7 +205,7 @@ function main()
     process.stdin.setRawMode(true);
     readline.emitKeypressEvents(process.stdin);
 
-    (async () => {
+    /*(async () => {
         tunnel = await localtunnel({port:8082,subdomain:mylocaltunnelsubdomain});
         Logger("INFO","Tunnel opened: " + tunnel.url);
         tunnel.on('close',() => {
@@ -215,6 +215,7 @@ function main()
             process.exit();
         });
     })();
+    */
 
 }
 
